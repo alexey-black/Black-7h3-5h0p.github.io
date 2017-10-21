@@ -1,0 +1,590 @@
+// See this thread for better explanation:
+// http://stackoverflow.com/questions/15837808/fancy-media-queries-with-some-less-magic
+
+/* # Setup devices width */
+// ## Minimum values for device width
+@xs-min: 350px; // extra small
+@sm-min: 768px; // small
+@md-min: 992px; // middle
+@lg-min: 1200px; // large
+
+// ## Maximum values for device width
+@xs-max: (@sm-min - 1); // extra small
+@sm-max: (@md-min - 1); // small
+@md-max: (@lg-min - 1); // middle
+
+/* # Variables for mobile first approach and strict ranges */
+@phone: ~"only screen and (min-width: @{xs-min})";
+@phone-strict: ~"only screen and (min-width: @{xs-min}) and (max-width: @{xs-max})";
+
+@tablet: ~"only screen and (min-width: @{sm-min})";
+@tablet-strict: ~"only screen and (min-width: @{sm-min}) and (max-width: @{sm-max})";
+
+@desktop: ~"only screen and (min-width: @{md-min})";
+@desktop-strict: ~"only screen and (min-width: @{md-min}) and (max-width: @{md-max})";
+
+@large: ~"only screen and (min-width: @{lg-min})";
+@media (min-width: @lg-min) and (max-width: 1400px){
+    header{
+        max-width:1400px;
+        .head-block--1{
+            max-width: @lg-min;
+        }
+        .head-block-block--2{
+            max-width: @lg-min !important;
+            margin: 0 auto;
+            .search input#edit-search-block-form--1 {
+                width: 233px !important;
+                height: 30px;
+                margin-top: -10px;
+            }
+        }
+    }
+    .content{
+        max-width:1400px;
+        height: 700px;
+        .content-block{
+            max-width: @lg-min;
+            .field-type-image{
+                width: 625px;
+                margin-right: 40px;
+                img{
+                    width: 605px !important;
+                }
+            }
+            .commerce-product-post-on-later {
+                width: 220px;
+                float: left;
+                position: relative;
+                top: 57px;
+            }
+            .commerce-product-add-to-cart {
+                width: 220px;
+                float: left;
+                margin-bottom: 40px;
+            }
+        }
+    }
+    .footer{
+        max-width:1400px;
+        .footer-block--1{
+            max-width: @lg-min;
+            .service-and-support {
+                width: 414px;
+                height: 130px;
+                float: left;
+                margin-right: 60px;
+                line-height: 1.5;
+            }
+
+            .about-company {
+                width: 283px;
+                height: 130px;
+                float: left;
+                margin-right: 18px;
+                line-height: 1.5;
+            }
+        }
+        .footer-block--2{
+            max-width: @lg-min;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: @md-min) and (max-width: @lg-min) {
+    header{
+        max-width:@lg-min;
+        .head-block--1{
+            max-width: @md-min;
+            margin: 0 auto;
+        }
+        .head-block-block--2{
+            max-width: @md-min !important;
+            margin: 0 auto;
+            .search {
+                width: 20% !important;
+                margin-left: 80%!important;
+            }
+            .search input#edit-search-block-form--1 {
+                width: 196px !important;
+                height: 30px;
+                margin-top: -10px;
+            }
+        }
+    }
+    .content{
+        max-width:@lg-min;
+        height: 700px;
+        .content-block{
+            max-width: @md-min;
+            .title-name h1 {
+                font-size: 34px;
+                font-weight: bold;
+                color: #000;
+                margin: 0;
+            }
+            .field-type-image {
+                width: 500px;
+                float: left;
+                margin-right: 55px;
+                img{
+                    width: 500px !important;
+                }
+            }
+            .title-name {
+                margin-bottom: 23px;
+                float: left;
+                width: 435px;
+            }
+            .commerce-product-post-on-later {
+                width: 220px;
+                float: left;
+                position: relative;
+                top: 103px;
+
+            }
+            .commerce-product-add-to-cart {
+                width: 220px;
+                float: left;
+                margin-bottom: 40px;
+                margin-top: 46px;
+            }
+             .field-name-body {
+                width: 435px;
+                font-size: 16px;
+                color: #000000;
+                margin-bottom: 54px;
+                float: left;
+            }
+            .commerce-product-price {
+                width: 435px;
+                font-size: 36px;
+                font-weight: bold;
+                color: #cc0000;
+                margin-bottom: 36px;
+                float: left;
+            }
+            .commerce-product-size {
+                width: 435px;
+                font-size: 16px;
+                color: #000000;
+                margin-bottom: 38px;
+                float: left;
+            }
+            .commerce-product-color {
+                width: 435px;
+                font-size: 16px;
+                color: #000000;
+                margin-bottom: 45px;
+                float: left;
+            }
+        }
+    }
+    .footer{
+        max-width:@lg-min;
+        .footer-block--1{
+            max-width: @md-min;
+            .service-and-support {
+                width: 200px;
+                height: 256px;
+                float: left;
+                margin-right: 57px;
+                line-height: 1.5;
+                ul {
+                    list-style-position: inside;
+                    -moz-column-count: 1;
+                    -webkit-column-count: 1;
+                    column-count: 1;
+                    padding: 0;
+                }
+            }
+            .about-company {
+                width: 100px;
+                height: 130px;
+                float: left;
+                margin-right: 110px;
+                line-height: 1.5;
+                ul {
+                    list-style-position: inside;
+                    -moz-column-count: 1;
+                    -webkit-column-count: 1;
+                    column-count: 1;
+                    padding: 0;
+                }
+            }
+        }
+        .footer-block--2{
+            max-width: @md-min;
+            margin-top: 0px;
+            margin-top: 152px;
+            border-top: 1px solid #d9d9d4;
+            padding-top: 36px;
+        }
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: @sm-min) and (max-width: @md-min) {
+    header{
+        max-width:@md-min;
+        .head-block--1{
+            max-width: @sm-min;
+        }
+        .head-block-block--2{
+            max-width: @sm-min !important;
+            margin: 0 auto;
+            .search {
+                width: 36% !important;
+                margin-left: 63%!important;
+            }
+        }
+    }
+    .content{
+        max-width:@md-min;
+        height: 1082px;
+        .content-block{
+            max-width: @sm-min;
+            .field-type-image {
+                width: 500px;
+                float: none;
+                margin: 0 auto;
+                img{
+                    width: 500px !important;
+                }}
+                .title-name {
+                    margin-bottom: 23px;
+                    float: none;
+                    width: auto;
+                    text-align: center;
+                    margin-top: 27px;
+                }
+                .field-name-body {
+                    width: auto;
+                    font-size: 16px;
+                    color: #000000;
+                    margin-bottom: 54px;
+                    text-align: center;
+                    float: none;
+                }
+                .commerce-product-price {
+                    width: 768px;
+                    font-size: 36px;
+                    font-weight: bold;
+                    color: #cc0000;
+                    margin-bottom: 36px;
+                    float: none;
+                    text-align: center;
+                }
+                .commerce-product-size {
+                    font-size: 16px;
+                    color: #000000;
+                    margin-bottom: 40px;
+                    float: left;
+                    width: 300px;
+                    margin: 2px 40px 0 100px;
+                }
+                .commerce-product-color {
+                    font-size: 16px;
+                    color: #000000;
+                    margin-bottom: 45px;
+                    float: left;
+                    width: 300px;
+                }
+                .commerce-product-add-to-cart {
+                    width: auto;
+                    float: none;
+                    margin-bottom: 40px;
+                    text-align: center;
+                }
+                .commerce-product-post-on-later {
+                    width: auto;
+                    float: none;
+                    text-align: center;
+                }
+
+        }
+    }
+    .footer{
+        max-width:@md-min;
+        .footer-block--1{
+            max-width: @sm-min;
+            .service-and-support {
+                width: 200px;
+                height: 256px;
+                float: left;
+                margin-right: 40px;
+                line-height: 1.5;
+                ul {
+                    list-style-position: inside;
+                    -moz-column-count: 1;
+                    -webkit-column-count: 1;
+                    column-count: 1;
+                    padding: 0;
+                }
+            }
+            .about-company {
+                width: 100px;
+                height: 130px;
+                float: left;
+                margin-right: 40px;
+                line-height: 1.5;
+                ul {
+                    list-style-position: inside;
+                    -moz-column-count: 1;
+                    -webkit-column-count: 1;
+                    column-count: 1;
+                    padding: 0;
+                }
+            }
+            .block-info {
+                width: 342px;
+                height: 130px;
+                float: left;
+            }
+        }
+        .footer-block--2{
+            max-width: @sm-min;
+            margin-top: 150px;
+            border-top: 1px solid #d9d9d4;
+            padding-top: 28px;
+        }
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media  (max-width: @sm-min) {
+    header{
+        max-width:@sm-min;
+        .head-block--1{
+            max-width: @xs-min;
+            margin: 0 auto;
+            background: #ffffff;
+            height: 160px !important;
+            font-size: 23px;
+            color: #cc0000;
+            display: flex;
+            flex-direction: column;
+            .site-head {
+                width: 350px!important;
+                margin: auto 0;
+            }
+            .site-head-name {
+                text-align: center!important;
+            }
+            .site-head-nomber {
+                text-align: center!important;
+            }
+        }
+        .head-block--2 {
+            background: #f2f2ed;
+            border: 1px solid #d9d9d4;
+            height: 100px !important;
+            #main-menu-links {
+                margin:13px 0px 0 -30px;
+            }
+        }
+        .head-block-block--2{
+            max-width: @xs-min !important;
+            margin: 0 auto;
+            height: 100px;
+            .search {
+                width: 80% !important;
+                margin-left: 0!important;
+                margin: 0 auto!important;
+                position: relative;
+                top: 23px;
+            }
+             ul li {
+                float: left;
+                list-style: none;
+                 margin: 2px 14px 0 0!important;
+                margin-left: 0px;
+            }
+        }
+    }
+    .content{
+        max-width:@sm-min;
+        height: 1100px;
+        .content-block{
+            max-width: @xs-min;
+            .field-type-image {
+                width: 350px;
+                float: none;
+                margin: 0 auto;
+                img{
+                    width: 350px !important;
+                }}
+            .title-name {
+                margin-bottom: 23px;
+                float: none;
+                width: auto;
+                text-align: center;
+                margin-top: 27px;
+            }
+            .field-name-body {
+                width: auto;
+                font-size: 16px;
+                color: #000000;
+                margin-bottom: 54px;
+                text-align: center;
+                float: none;
+            }
+            .commerce-product-price {
+                width: 350px;
+                font-size: 36px;
+                font-weight: bold;
+                color: #cc0000;
+                margin-bottom: 36px;
+                float: none;
+                text-align: center;
+            }
+            .commerce-product-size {
+                font-size: 16px;
+                color: #000000;
+                margin-bottom: 40px;
+                float: left;
+                width: 350px;
+
+            }
+            .commerce-product-color {
+                font-size: 16px;
+                color: #000000;
+                margin-bottom: 45px;
+                float: left;
+                width: 350px;
+            }
+            .commerce-product-add-to-cart {
+                width: auto;
+                float: none;
+                margin-bottom: 40px;
+                text-align: center;
+            }
+            .commerce-product-post-on-later {
+                width: auto;
+                float: none;
+                text-align: center;
+            }
+        }
+    }
+    .footer{
+        max-width:@sm-min;
+        height: 648px;
+        border-top: 1px solid #d9d9d4;
+        margin-top: 90px;
+        .footer-block--1{
+            max-width: @xs-min;
+            height: 500px;
+            margin: -20px auto 60px;
+            .service-and-support {
+                width: 184px;
+                height: 256px;
+                float: left;
+                margin-right: 40px;
+                line-height: 1.5;
+                ul {
+                    list-style-position: inside;
+                    -moz-column-count: 1;
+                    -webkit-column-count: 1;
+                    column-count: 1;
+                    padding: 0;
+                    a {
+                        font-size: 10px;
+                        color: #000000;
+                        text-decoration: none;
+                    }
+                }
+            }
+            .about-company {
+                width: 92px;
+                height: 230px;
+                float: left;
+                margin-right: 0px;
+                line-height: 1.5;
+                ul {
+                    list-style-position: inside;
+                    -moz-column-count: 1;
+                    -webkit-column-count: 1;
+                    column-count: 1;
+                    padding: 0;
+                    a {
+                        font-size: 10px;
+                        color: #000000;
+                        text-decoration: none;
+                    }
+                }
+            }
+            .block-info {
+                width: 340px;
+                height: 130px;
+                float: left;
+                font-size: 10px;
+            }
+            .block-block-link {
+                text-align: center;
+                margin: 47px 56px 0 0;
+                top: 15px;
+                float: none;
+                display: block;
+                position: relative;
+                top: 13px;
+                .block-block-link--1 {
+                    width: 87px;
+                    float: left !important;
+                }
+                .block-block-link--2 {
+                    width: 87px;
+                    float: left !important;
+                }
+                .block-block-link--3 {
+                    width: 87px;
+                    float: left !important;
+                }
+            }
+        }
+        .footer-block--2{
+            max-width: 350px;
+            border-top: 1px solid #d9d9d4;
+            padding-top: 28px;
+            position: relative;
+            margin-top: -66px;
+            text-align: center;
+        }
+    }
+
+}
