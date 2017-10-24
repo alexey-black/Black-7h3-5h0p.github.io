@@ -21,22 +21,22 @@ function clickL() {
     M_sizeInput.classList.remove('active');
 }
 
-var 1_colorInput = document.getElementById('color--1');
-var 2_colorInput = document.getElementById('color--2');
-var 3_colorInput = document.getElementById('color--3');
+var colorInput1 = document.getElementById('color--1');
+var colorInput2 = document.getElementById('color--2');
+var colorInput3 = document.getElementById('color--3');
 
 function click1() {
-    1_colorInput.classList.add('active');
-    2_colorInput.classList.remove('active');
-    3_colorInput.classList.remove('active');
+    colorInput1.classList.add('active');
+    colorInput2.classList.remove('active');
+    colorInput3.classList.remove('active');
 }
 function click2() {
-    2_colorInput.classList.add('active');
-    3_colorInput.classList.remove('active');
-    1_colorInput.classList.remove('active');
+    colorInput2.classList.add('active');
+    colorInput3.classList.remove('active');
+    colorInput1.classList.remove('active');
 }
 function click3() {
-    3_colorInput.classList.add('active');
-    1_colorInput.classList.remove('active');
-    2_colorInput.classList.remove('active');
+    colorInput3.classList.add('active');
+    colorInput1.classList.remove('active');
+    colorInput2.classList.remove('active');
 }
