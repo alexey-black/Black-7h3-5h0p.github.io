@@ -5,17 +5,17 @@ var S_sizeInput = document.getElementById('size--s');
 var M_sizeInput = document.getElementById('size--m');
 var L_sizeInput = document.getElementById('size--l');
 
-function clickS() {
+function clicks() {
     S_sizeInput.classList.add('active');
     M_sizeInput.classList.remove('active');
     L_sizeInput.classList.remove('active');
 }
-function clickM() {
+function clickm() {
     M_sizeInput.classList.add('active');
     L_sizeInput.classList.remove('active');
     S_sizeInput.classList.remove('active');
 }
-function clickL() {
+function clickl() {
     L_sizeInput.classList.add('active');
     S_sizeInput.classList.remove('active');
     M_sizeInput.classList.remove('active');
