@@ -8,164 +8,168 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <script src="js/scripts.js"></script>
 </head>
 <body>
 
+
 <header class="header">
-    <div class="header__block-1">
-        <div class="site-head site-head-name">
-            <a class="head-logo site-head-name_text" href="#">7h3 5h0p</a>
+    <div class="header__block-top head-top">
+        <div class="head-top__name head-top__item">
+            <a class="head-top__name_text" href="#">7h3 5h0p</a>
         </div>
-        <div class="site-head site-head-logo">
-            <a href="#" class="site-head-logo_img"><img src="img/logo.png"></a>
+        <div class="head-top__logo head-top__item">
+            <a href="#" class="head-top__logo_link"><img class="head-top__logo_img" src="img/logo.png"></a>
         </div>
-        <div class="site-head site-head-nomber">
-            <p class="head-logo site-head-nomber_text">+7 (812) 2•12•85•06</p>
+        <div class="head-top__nomber head-top__item">
+            <p class="head-top__nomber_text">+7 (812) 2•12•85•06</p>
         </div>
     </div>
-    <div class="header__block-2">
-        <div class="head-block-block-2">
-            <ul id="main-menu-links" class="head-block-block-2_menu">
+    <div class="header__block-bottom">
+        <div class="head-bottom">
+            <ul class="head-bottom__menu main-menu">
                 <% const menu = ['LISP','OCaml', 'JavaScript', 'Python', 'PHP']; %>
                 <% for(let item of menu){ %>
-                    <li class="menu-item">
-                        <a href="#" class="menu-item_link"><%= item%></a>
+                    <li class="main-menu__item">
+                        <a href="#" class="main-menu__link"><%= item%></a>
                     </li>
                 <% } %>
             </ul>
-            <div class="head-block-block-2_search">
-                        <form action="/" method="post" id="search-block-form" accept-charset="UTF-8">
-                                    <div class="form-item form-type-textfield form-item-search-block-form">
-                                        <label class="element-invisible" for="edit-search-block-form--1"></label>
-                                        <input title="Введите ключевые слова для поиска." type="text" id="edit-search-block-form--1" name="search_block_form" value="" size="15" maxlength="128" class="form-text">
-                                    </div>
-                                    <div class="form-actions form-wrapper" id="edit-actions"><input type="submit" id="edit-submit" name="op" value="Поиск" class="form-submit"></div><input type="hidden" name="form_build_id">
-                                    <input type="hidden" name="form_id" value="search_block_form">
-                        </form>
+            <div class="head-bottom__search search">
+                <form action="/" method="post" id="searchForm" accept-charset="UTF-8">
+                    <div class="search__form-item">
+                        <label class="element-invisible" for="edit-search-block-form--1"></label>
+                        <input title="Введите ключевые слова для поиска." type="text" id="editSearchForm" name="search_block_form" value="" size="15" maxlength="128" class="search__form-window">
+                    </div>
+                    <div class="search__form-item" id="editActions"><input type="submit" id="editSubmit" name="op" value="Поиск" class="search__form-button">
+                    </div>
+                </form>
             </div>
         </div>
     </div>
 </header>
 
 <div class="content">
-    <div id="content__node" class="node node-view-product node-full clearfix" about="/node/1">
-        <div class="content__block">
-                <div class="content__block_breadcrumb breadcrumb">
-                    <a class="content__block_breadcrumb_link" href="#">LISP</a> / <a class="content__block_breadcrumb_link" href="#">Одежда</a> / Футболки
+    <div class="content__block">
+        <div class="content__breadcrumb breadcrumb">
+            <a class="breadcrumb_link" href="#">LISP</a> / <a class="breadcrumb_link" href="#">Одежда</a> / Футболки
+        </div>
+
+        <div class="content__field-image field-image">
+            <img class="field-image_img" id="fullImg" name="full-img" src="img/tshirts/tshirt_green.jpg">
+        </div>
+
+        <div class="content__title-name title-name">
+            <h1 class="title-name_text">Футболка Alien technology</h1>
+        </div>
+        <div class="content__field-body field-body">
+            <p class="field-body_text">Состав: 100% хлопок, динамическая типизация, польская нотация. Производство: Россия.</p>
+        </div>
+
+        <div class="content__product-price product-price" >
+            <div class="product-price_text">1500₽</div>
+        </div>
+
+        <form class="content__webform-client-form" action="/" method="post" id="webformClientForm" accept-charset="UTF-8">
+            <div class="content__product-size  field-size">
+                <label for="edit-submitted-size" class="label-text">Размер:</label>
+                <div id="editSubmittedSize" class="form-radios">
+                    <div class="form-radios__form-item">
+                        <input required="required" type="radio" id="editSubmittedSize1" name="submitted[size]" value="1" class="form-radios__input form-radios__input_1">
+                        <label class="form-radios__label" for="edit-submitted-size-1"> <p class="form-radios__text">S</p> </label>
+                     </div>
+                    <div class="form-radios__form-item">
+                        <input required="required" type="radio" id="editSubmittedSize2" name="submitted[size]" value="2" class="form-radios__input form-radios__input_2">
+                        <label class="form-radios__label" for="edit-submitted-size-2"> <p class="form-radios__text">M</p></label>
+
+                    </div>
+                    <div class="form-radios__form-item">
+                        <input required="required" type="radio" id="editSubmittedSize3" name="submitted[size]" value="3" class="form-radios__input form-radios__input_3">
+                        <label class="form-radios__label" for="edit-submitted-size-3"><p class="form-radios__text">L</p> </label>
+
+                    </div>
                 </div>
-
-            <div class="content__block_field-image field-image">
-                <img class="field-image_img" id="full-img" name="full-img" src="img/tshirts/tshirt_green.jpg" style="width: 800px;">
             </div>
+            <div class="content__product-color  field-color">
+                <label for="edit-submitted-color" class="label-text">Цвет:</label>
+                <div id="editSubmittedColor" class="form-radios">
+                    <div class="form-radios__form-item">
+                        <input required="required" type="radio" id="editColorWhite" name="submitted[color]" value="white"  class="js_form-radios__input form-radios__input form-radios__input_white">
+                        <label class="form-radios__label" for="editColorWhite"> </label>
 
-            <div class="content__block_title-name title-name">
-                <h1 class="title-name_text">Футболка Alien technology</h1>
-            </div>
-
-            <div class="content__block_field-body field-body">
-                    <p class="field-body_text">Состав: 100% хлопок, динамическая типизация, польская нотация. Производство: Россия.</p>
-            </div>
-
-            <div class="content__block_product-price product-price" >
-                <div class="product-price_text">1500₽</div>
-            </div>
-
-            <form class="content__block_webform-client-form" action="/" method="post" id="webform-client-form" accept-charset="UTF-8">
-                    <div class="content__block_product-size  field-size">
-                        <label for="edit-submitted-size" class="label-text">Размер:</label>
-                        <div id="edit-submitted-size" class="form-radios">
-                            <div class="form-radios__form-item-submitted-size">
-                                <input required="required" type="radio" id="edit-submitted-size-1" name="submitted[size]" value="1" class="form-radio-button"> <label class="option" for="edit-submitted-size-1"> <p>S</p> </label>
-
-                            </div>
-                            <div class="form-radios__form-item-submitted-size">
-                                <input required="required" type="radio" id="edit-submitted-size-2" name="submitted[size]" value="2" class="form-radio-button">  <label class="option" for="edit-submitted-size-2"> <p>M</p></label>
-
-                            </div>
-                            <div class="form-radios__form-item-submitted-size">
-                                <input required="required" type="radio" id="edit-submitted-size-3" name="submitted[size]" value="3" class="form-radio-button">  <label class="option" for="edit-submitted-size-3"><p>L</p> </label>
-
-                            </div>
-                        </div>
                     </div>
+                    <div class="form-radios__form-item">
+                        <input required="required" type="radio" id="editColorYellow" name="submitted[color]" value="yellow" class="js_form-radios__input form-radios__input form-radios__input_yellow">
+                        <label class="form-radios__label" for="editColorYellow"> </label>
 
-                    <div class="content__block_product-color  field-field-color">
-                        <label for="edit-submitted-color" class="label-text">Цвет:</label>
-                        <div id="edit-submitted-color" class="form-radios">
-                            <div class="form-radios__form-item-submitted-color">
-                                <input required="required" type="radio" id="edit-submitted-color-1" name="submitted[color]" value="white"  onclick="editIMG('img/tshirts/tshirt_white.jpg');click1()"  class="form-radio-button">  <label class="option" for="edit-submitted-color-1"> </label>
-
-                            </div>
-                            <div class="form-radios__form-item-submitted-color">
-                                <input required="required" type="radio" id="edit-submitted-color-2" name="submitted[color]" value="yellow" onclick="editIMG('img/tshirts/tshirt_yellow.jpg');click2()"  class="form-radio-button">  <label class="option" for="edit-submitted-color-2"> </label>
-
-                            </div>
-                            <div class="form-radios__form-item-submitted-color">
-                                <input required="required" type="radio" id="edit-submitted-color-3" name="submitted[color]" value="green" onclick="editIMG('img/tshirts/tshirt_green.jpg');click3()"  class="form-radio-button">  <label class="option" for="edit-submitted-color-3"> </label>
-
-                            </div>
-                        </div>
                     </div>
+                    <div class="form-radios__form-item">
+                        <input required="required" type="radio" id="editColorGreen" name="submitted[color]" value="green"  class="js_form-radios__input form-radios__input form-radios__input_green">
+                        <label class="form-radios__label" for="editColorGreen"> </label>
 
-                    <div class="content__block_product-add-to-cart  field-add-to-cart"><input class="form-submit ajax-processed add-to-cart" type="submit" name="op" value="Купить"></div></form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content__product-add-to-cart  field-add-to-cart"><input class="form-submit ajax-processed add-to-cart" type="submit" name="op" value="Купить"></div>
+        </form>
 
 
-            <div class="content__block_product-post-on-later  field-post-on-later">
+            <div class="content__product-post-on-later  field-post-on-later">
                 <img src="img/heart-icon.png"><input type="submit" name="post-on-later" value="Отложить на потом" class="form-submit ajax-processed post-on-later">
             </div>
 
         </div>
     </div>
-</div>
+
 
 <footer class="footer">
-    <div class="footer-block footer-block--1">
-        <div class="service-and-support"><h2 class="footer-title-list">Сервис и поддержка</h2>
-            <ul id="service-and-support" class="links clearfix">
+    <div class="footer__block footer__block-top footer-top">
+        <div class="footer-top__menu footer-top__menu-left">
+            <h2 class="footer-top__menu_title">Сервис и поддержка</h2>
+            <ul class="footer-top__menu_list">
                 <%const service = ['Как сделать заказ','Возврат товара','Публичная оферта','Доставка','Способы оплаты','Правила продажи','Возврат денежных средств','Вопросы и ответы'];%>
                 <%for (let item = 1;item<=service.length;item++){%>
-                <li class="service-and-support--<%=item%>">
-                    <a href="#" title="<%=service[item-1]%>"><%=service[item-1]%></a>
+                <li class="footer-top__menu_item footer-top__menu_list-<%=item%>">
+                    <a class="footer-top__menu_link" href="#" title="<%=service[item-1]%>"><%=service[item-1]%></a>
                 </li>
                 <%}%>
             </ul>
         </div>
 
-        <div class="about-company"><h2 class="footer-title-list">О комтании</h2>
-            <ul id="about-company" class="links clearfix">
+        <div class="footer-top__menu footer-top__menu-midle"><h2 class="footer-top__menu_title">О комтании</h2>
+            <ul class="footer-top__menu_list">
                 <%const about = ['О нас','Контакты','Вакансии','Партнерам','Сертификаты','Преимущества','Наши скидки'];%>
                 <%for (let item = 1;item<=about.length;item++){%>
-                <li class="service-and-support--<%=item%>">
-                    <a href="#" title="<%=about[item-1]%>"><%=about[item-1]%></a>
+                <li class="footer-top__menu_item footer-top__menu_item-<%=item%>">
+                    <a class="footer-top__menu_link" href="#" title="<%=about[item-1]%>"><%=about[item-1]%></a>
                 </li>
                 <%}%>
             </ul>
         </div>
-        <div class="block-info">
-            <div class="block-block-info block-info--1">
-                <img src="img/icons/delivery.svg" width="50" height="50">бесплатная доставка от 4000 ₽
+        <div class="footer-top__block-info">
+            <div class="footer-top__block-info_item footer-top__block-info_first">
+                <img class="footer-top__block-info_img" src="img/icons/delivery.svg" width="50" height="50">бесплатная доставка от 4000 ₽
             </div>
-            <div class="block-block-info block-info--2">
-                <img src="img/icons/heart.svg" width="32" height="32">пробники в подарок при каждой покупке
+            <div class="footer-top__block-info_item footer-top__block-info_second">
+                <img class="footer-top__block-info_img" src="img/icons/heart.svg" width="32" height="32">пробники в подарок при каждой покупке
             </div>
-            <div class="block-block-info block-info--3">
-                <img src="img/icons/cup.svg" width="32" height="32">акции и подарки за покупку
+            <div class="footer-top__block-info_item footer-top__block-info_the-third">
+                <img class="footer-top__block-info_img" src="img/icons/cup.svg" width="32" height="32">акции и подарки за покупку
             </div>
         </div>
-        <div class="block-block-link">
-            <div class="block-block-link block-block-link--1">
-                <a href="#"><img src="img/icons/facebook.svg" width="32" height="32"></a>
+        <div class="footer-top__block-icon">
+            <div class="footer-top__block-icon_link footer-top__block-icon_link-1">
+                <a href="#"><img class="footer-top__block-icon_img" src="img/icons/facebook.svg" width="32" height="32"></a>
             </div>
-            <div class="block-block-link block-block-link--2">
-                <a href="#"><img src="img/icons/twitter.svg" width="32" height="32"></a>
+            <div class="footer-top__block-icon_link footer-top__block-icon_link-2">
+                <a href="#"><img class="footer-top__block-icon_img" src="img/icons/twitter.svg" width="32" height="32"></a>
             </div>
-            <div class="block-block-link block-block-link--3">
-                <a href="#"><img src="img/icons/instagram.svg" width="32" height="32"></a>
+            <div class="footer-top__block-icon_link footer-top__block-icon_link-3">
+                <a href="#"><img class="footer-top__block-icon_img" src="img/icons/instagram.svg" width="32" height="32"></a>
             </div>
         </div>
     </div>
-    <div class="footer-block footer-block--2">
+    <div class="footer__block footer__block-bottom">
         <p>2005-2017 © 7h35h0p.ru — модный интернет-магазин одежды, обуви и аксессуаров.<br> Все права защищены. Доставка по всей России!</p>
     </div>
 </footer>
