@@ -13,42 +13,78 @@
 
 
 <header class="header">
-    <div class="header__block-top head-top">
-        <div class="head-top__name head-top__item">
-            <a class="head-top__name_text" href="#">7h3 5h0p</a>
+    <div style="position: absolute;width:  100%;height:  100%;z-index:  100;">
+    <div class="header__main-menu main-menu">
+        <div class="block-logo">
+            <img class="block-logo__img" src="img/logo.png">
         </div>
-        <div class="head-top__logo head-top__item">
-            <a href="#" class="head-top__logo_link"><img class="head-top__logo_img" src="img/logo.png"></a>
-        </div>
-        <div class="head-top__nomber head-top__item">
-            <p class="head-top__nomber_text">+7 (812) 2•12•85•06</p>
+        <ul class="main-menu__list">
+            <li class="main-menu__item"><a href="#">О нас</a></li>
+            <li class="main-menu__item"><a href="#">Услуги</a></li>
+            <li class="main-menu__item"><a href="#">Команда</a></li>
+            <li class="main-menu__item"><a href="#">Цены</a></li>
+            <li class="main-menu__item"><a href="#">Клиенты</a></li>
+            <li class="main-menu__item"><a href="#">Обучение</a></li>
+            <li class="main-menu__item"><a href="#">Контакты</a></li>
+        </ul>
+    </div>
+    <div class="header__block-middle">
+        <h2 class="header__block-middle_title">“Black Room<span style="color:#1842d1;">.</span>”</h2>
+        <p class="header__block-middle_body">мы команда для развития вашего проекта</p>
+        <div class="header__block-middle_block-links">
+            <a class="header__block-middle_button button-blue" href="#">наши услуги</a>
+            <a class="header__block-middle_button button-noblue" href="#">про обучение</a>
         </div>
     </div>
-    <div class="header__block-bottom">
-        <div class="head-bottom">
-            <ul class="head-bottom__menu main-menu">
-                <% const menu = ['LISP','OCaml', 'JavaScript', 'Python', 'PHP']; %>
-                <% for(let item of menu){ %>
-                    <li class="main-menu__item">
-                        <a href="#" class="main-menu__link"><%= item%></a>
-                    </li>
-                <% } %>
-            </ul>
-            <div class="head-bottom__search search">
-                <form action="/" method="post" id="searchForm" accept-charset="UTF-8">
-                    <div class="search__form-item">
-                        <label class="element-invisible" for="edit-search-block-form--1"></label>
-                        <input title="Введите ключевые слова для поиска." type="text" id="editSearchForm" name="search_block_form" value="" size="15" maxlength="128" class="search__form-window">
-                    </div>
-                    <div class="search__form-item" id="editActions"><input type="submit" id="editSubmit" name="op" value="Поиск" class="search__form-button">
-                    </div>
-                </form>
-            </div>
-        </div>
+    <div class="scroll-icon">
+
     </div>
+    </div>
+    <video loop muted autoplay class="fullscreen-bg__video">
+        <source src="img/video.mp4" type="video/mp4">
+        <source src="img/plane.webm" type="video/webm">
+    </video>
 </header>
 
-<div class="content">
+<div class="advantages">
+    <div class="advantages-block">
+        <h2 class="advantages__title">Комплексное продвижение вашего аккаунта в instagram</h2>
+        <p class="advantages__body">До недавнего времени считалось, что абсолютно сходящийся ряд продуцирует интеграл по ориентированной области. Первая производная переворачивает лист Мёбиуса. Замкнутое множество</p>
+    </div>
+    <img src="img/knife.png" class="knife-img">
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<div class="content">
     <div class="content__block">
         <div class="content__breadcrumb breadcrumb">
             <a class="breadcrumb_link" href="#">LISP</a> / <a class="breadcrumb_link" href="#">Одежда</a> / Футболки
@@ -172,7 +208,7 @@
     <div class="footer__block footer__block-bottom">
         <p>2005-2017 © 7h35h0p.ru — модный интернет-магазин одежды, обуви и аксессуаров.<br> Все права защищены. Доставка по всей России!</p>
     </div>
-</footer>
+</footer>-->
 
 <script src="js/scripts.js"></script>
 </body>
