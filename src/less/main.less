@@ -5,25 +5,25 @@
 @LinkColor:#1e44d0;
 @font-face{
     font-family: 'GothaPro';
-    src: url('font/GothaProReg.otf');
+    src: url('../img/font/GothaProReg.otf');
     font-weight: normal;
     font-style: normal;
 }
 @font-face{
     font-family: 'GothaProBlack';
-    src: url('font/GothaProBla.otf');
+    src: url('../img/font/GothaProBla.otf');
     font-weight: normal;
     font-style: normal;
 }
 @font-face{
     font-family: 'GothaProMed';
-    src: url('font/GothaProMed.otf');
+    src: url('../img/font/GothaProMed.otf');
     font-weight: normal;
     font-style: normal;
 }
 @font-face{
     font-family: 'GothaProBol';
-    src: url('font/GothaProBol.otf');
+    src: url('../img/font/GothaProBol.otf');
     font-weight: normal;
     font-style: normal;
 }
@@ -42,8 +42,11 @@ body{
 .header{
     background-size: cover;
     width: 100%;
+    max-width: 1920px;
     height: 900px;
     color: #fff;
+    margin: 0 auto;
+    overflow: hidden;
      &__main-menu{
          width: 1400px;
          margin: 0 auto;
@@ -53,6 +56,7 @@ body{
         width: 1000px;
         height: 500px;
         background-size: cover;
+        margin-top: 187px;
         &_title{
             font-family: 'GothaProBlack';
             font-size: 102px;
@@ -80,6 +84,36 @@ body{
         }
     }
 }
+
+.main-menu{
+    &__list{
+        list-style: none;
+        position: relative;
+        margin: 0 auto;
+        width: 58%;
+        float: left;
+        margin-top: 41px;
+    }
+    &__item{
+        float: left;
+        margin-right: 50px;
+    }
+    &__link{
+        color: #fff;
+        text-decoration: none;
+        font-style: 16px;
+    }
+    &__link:hover,&__link:active,&__link:focus{
+        color: #1e44d0;
+    }
+}
+.block-logo{
+    float: left;
+    margin-top: 30px;
+    width: 36%;
+
+}
+
 .button-blue{
     background: #1842d1;
     box-shadow: 0 0 20px #1842d1;
@@ -125,11 +159,58 @@ video.fullscreen-bg__video {
     left: 0;
     width: 100%;
     height: 900px;
+    width: 1920px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+.video-controler{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 .knife-img {
     position: absolute;
     top: -29px;
     left: -58px;
+}
+.about{
+    max-width: 1920px;
+    margin: 0 auto;
+    background: #080808;
+    color:#fff;
+    padding: 100px 0 40px;
+    margin-top: 50px;
+    &__block{
+        width: 1400px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: stretch;
+        flex-wrap: wrap;
+        &_item{
+            width: 400px;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+    }
+}
+.about-item{
+    &__img{
+        width: 70px;
+        height: 70px;
+    }
+    &__body{
+        width: 260px;
+        margin: 0 auto;
+        color: #a2a2a2;
+    }
+    &__title{
+        font-family: GothaProBlack;
+        font-size: 28px;
+
+    }
 }
 
 
