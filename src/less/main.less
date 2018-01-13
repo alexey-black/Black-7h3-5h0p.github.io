@@ -27,6 +27,12 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face{
+    font-family: 'GothaProlig';
+    src: url('../img/font/GothaProLig.otf');
+    font-weight: normal;
+    font-style: normal;
+}
 body{
     min-width: 320px;
     font-family: 'GothaPro';
@@ -48,7 +54,7 @@ body{
     margin: 0 auto;
     overflow: hidden;
      &__main-menu{
-         width: 1400px;
+         width: 1200px;
          margin: 0 auto;
      }
     &__block-middle{
@@ -66,20 +72,23 @@ body{
         }
         &_body{
             font-family: 'GothaPro';
-            font-size: 25px;
+            font-size: 18px;
             text-align: center;
             margin-bottom: 54px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
         }
         &_button{
-            font-size: 18px;
+            font-size: 14px;
             color: #fff;
             text-decoration: none;
             padding: 15px 36px;
             border: 2px solid #1842d1;
-            border-radius: 30px;
+            border-radius: 70px;
+            text-transform: uppercase !important;
         }
         &_block-links{
-            width: 420px;
+            width: 470px;
             margin: 0 auto;
         }
     }
@@ -90,9 +99,10 @@ body{
         list-style: none;
         position: relative;
         margin: 0 auto;
-        width: 58%;
+        width: 63%;
         float: left;
         margin-top: 41px;
+        padding: 0;
     }
     &__item{
         float: left;
@@ -110,14 +120,15 @@ body{
 .block-logo{
     float: left;
     margin-top: 30px;
-    width: 36%;
+    width: 37%;
 
 }
 
 .button-blue{
     background: #1842d1;
     box-shadow: 0 0 20px #1842d1;
-    margin-right: 17px;
+    margin-right: 20px;
+    margin-left: 13px;
 }
 .advantages{
     width: 1200px;
@@ -147,10 +158,12 @@ body{
         margin-right: 4%;
         float: left;
         line-height: 1.65;
-        margin-top: 10px;
-        border-bottom: 1px solid #fff;
+        margin-top: -2px;
+        border-bottom: 1px solid #afafaf;
         padding-bottom: 19px;
-        font-size: 16px;
+        font-size: 15px;
+        letter-spacing: 1px;
+        font-weight: normal;
     }
 }
 video.fullscreen-bg__video {
@@ -198,13 +211,15 @@ video.fullscreen-bg__video {
 }
 .about-item{
     &__img{
-        width: 70px;
         height: 70px;
     }
     &__body{
         width: 260px;
         margin: 0 auto;
         color: #a2a2a2;
+        font-size: 14px;
+        letter-spacing: 1px;
+        line-height: 1.4;
     }
     &__title{
         font-family: GothaProBlack;
