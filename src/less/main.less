@@ -37,6 +37,7 @@
 body{
     min-width: 320px;
     font-family: 'GothaPro';
+    overflow-x: hidden;
     p{
         margin: 0;
     }
@@ -218,12 +219,12 @@ video.fullscreen-bg__video {
         line-height: 1.4;
     }
     &__title{
-        font-family: GothaProBlack;
+        font-family: 'GothaProBlack';
         font-size: 28px;
 
     }
 }
-.anim_btn:link, a.anim_btn:visited {
+.anim_btn {
     position: relative;
     display: block;
     max-width: 180px;
@@ -237,13 +238,14 @@ video.fullscreen-bg__video {
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
 }
-.button-blue:link, .button-blue:visited{
+.button-blue{
     background: #1842d1;
     box-shadow: 0 0 20px #1842d1;
     margin-right: 20px;
     margin-left: 13px;
+    z-index: 0;
 }
-.anim_btn:link:after, a.anim_btn:visited:after {
+.anim_btn:after {
     content: "";
     position: absolute;
     background: none repeat scroll 0 0 #fff;
@@ -252,16 +254,17 @@ video.fullscreen-bg__video {
     top: 50%;
     width: 100%;
     z-index: -1;
+    border-radius: 70px;
     -webkit-transition: all .3s ease 0s;
     -moz-transition: all .3s ease 0s;
     -o-transition: all .3s ease 0s;
     transition: all .3s ease 0s;
 }
-.anim_btn:link:hover, a.anim_btn:visited:hover {
+.anim_btn:hover{
     color: #333;
     text-shadow: none;
 }
-.anim_btn:link:hover:after, a.anim_btn:visited:hover:after {
+.anim_btn:hover:after{
     height: 420%;
 }
 .anim_btn.effektD:after {
@@ -278,6 +281,74 @@ video.fullscreen-bg__video {
     width: 110%;
     opacity: 1;
 }
+
+.professionals{
+    background: url('../img/prof-backgraund.jpg') no-repeat center;
+    background-size: cover;
+    max-width: 1920px;
+    margin: -20px auto;
+    height: 1020px;
+    &__block{
+        width: 1200px;
+        margin: 0 auto;
+        margin-top: 20px;
+        padding-top: 112px;
+        &_title{
+            margin-bottom:33px ;
+        }
+
+    }
+    &__list{
+        &_item{
+            width: 400px;
+            float: left;
+        }
+    }
+    &__title{
+        font-size: 58px;
+        font-family: 'GothaProBlack';
+        margin: 0;
+        width: 600px;
+        line-height: 1;
+        margin-bottom: 64px;
+        float: left;
+    }
+    &__body{
+        width: 575px;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    &__icon{
+        position: relative;
+        top: -35px;
+        left: -189px;
+    }
+    &__line{
+        width: 200px;
+        position: relative;
+        border-bottom: 2px solid #1e44d0;
+        top: 63px;
+    }
+    &__img{
+        height: 440px;
+        width: 370px;
+        box-shadow: 10px 10px 30px #cccccc;
+        border-radius: 21px;
+        margin-bottom: 22px;
+    }
+    &__item-title{
+        font-family: 'GothaProBlack';
+        font-size: 28px;
+        margin: 0px 0 12px 0;
+    }
+    &__item-body{
+        line-height: 1.5;
+        font-size: 14px;
+        width: 350px;
+    }
+}
+
+
 
 
 
