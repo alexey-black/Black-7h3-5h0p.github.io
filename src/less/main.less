@@ -405,9 +405,9 @@ video.fullscreen-bg__video {
         width: 1200px;
         margin: 0 auto;
         margin-top: 20px;
-        padding-top: 112px;
+        padding-top: 100px;
         &_title{
-            margin-bottom:33px ;
+            margin-bottom:46px;
         }
 
     }
@@ -415,6 +415,17 @@ video.fullscreen-bg__video {
         &_item{
             width: 400px;
             float: left;
+            position: relative;
+        }
+        &_item-hover{
+            width: 370px;
+            height: 440px;
+            background: none;
+            position: absolute;
+            color: #fff;
+            top: 0px;
+            border-radius: 20px;
+            box-shadow: none;
         }
     }
     &__title{
@@ -448,6 +459,25 @@ video.fullscreen-bg__video {
         box-shadow: 10px 10px 30px #cccccc;
         border-radius: 21px;
         margin-bottom: 22px;
+        transition: 1s;
+    }
+    &__list_item-hover{}
+    &__list_item-hover-block:hover &__img,
+    &__list_item-hover-block:active &__img,
+    &__list_item-hover-block:focus &__img{
+        transform: rotateY(-180deg);
+        transition: 1s;
+        opacity: 0;
+        box-shadow: none;
+    }
+    &__list_item-hover-block:hover &__img + .item-hover,
+    &__list_item-hover-block:active &__img + .item-hover,
+    &__list_item-hover-block:focus &__img + .item-hover{
+        transform: rotateY(0deg);
+        transition: 1s;
+        opacity: 1;
+        background: #1e44d0;
+        box-shadow: 10px 10px 30px #cccccc;
     }
     &__item-title{
         font-family: 'GothaProBlack';
@@ -460,9 +490,105 @@ video.fullscreen-bg__video {
         width: 350px;
     }
 }
+.item-hover {
+    transform: rotateY(180deg);
+    transition: 1s;
+    opacity: 0;
+    &__icon{
+        position: relative;
+        left: -76px;
+        top: -54px;
+    }
+    &__title{
+        text-align: center;
+        margin: -112px auto 43px;
+        font-family: 'GothaProBlack';
+        font-size: 32px;
+        width: 200px;
+        line-height: 1.2;
+    }
+    &__body{
+        margin: 0 auto;
+        width: 262px;
+        line-height: 2.5;
+    }
+}
 
+.number-of {
+    max-width: 1920px;
+    background: #f1f1f1;
+    margin: 0 auto;
+    padding: 56px 0 13px;
+    &__block {
+        width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: stretch;
+        flex-wrap: wrap;
+    }
+    &__item{
+        width: 400px;
+        text-align: center;
+        margin-bottom: 60px;
+        &_title {
+            margin: 0 0px 0px 0;
+            text-align: center;
+            font-size: 100px;
+            font-family: 'GothaProBlack';
+        }
+        &_body{
+            font-size: 20px;
+            color: #080808;
+            text-align: center;
+        }
+    }
+}
 
+.rates {
+    background: #080808;
+    background-size: cover;
+    max-width: 1920px;
+    margin: -20px auto;
+    height: 1020px;
+    color:#fff;
+    &__block {
+        width: 1200px;
+        margin: 0 auto;
+        margin-top: 20px;
+        padding-top: 80px;
+        &_title {
+            margin-bottom: 46px;
+        }
 
+    }
+    &__title {
+        font-size: 58px;
+        font-family: 'GothaProBlack';
+        margin: 0;
+        width: 1000px;
+        line-height: 1;
+        margin-bottom: 50px;
+        float: left;
+    }
+    &__body {
+        width: 590px;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    &__icon {
+        position: relative;
+        top: -6px;
+        left: -220px;
+    }
+    &__line {
+        width: 200px;
+        position: relative;
+        border-bottom: 2px solid #1e44d0;
+        top: 63px;
+    }
+}
 
 
 
