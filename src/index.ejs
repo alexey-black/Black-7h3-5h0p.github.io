@@ -6,6 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
@@ -130,7 +131,7 @@
                 <div class="professionals__list_item-hover-block">
                     <img class="professionals__img" src="img/proff-2.png">
                     <div class="professionals__list_item-hover item-hover">
-                        <img class="item-hover__icon" src="img/brill.png">
+                        <img class="item-hover__icon" src="img/brill2.png">
                         <div class="item-hover__block">
                             <h2 class="item-hover__title">Личностные качества</h2>
                             <p class="item-hover__body">- Фотограф со стажем<br>
@@ -148,7 +149,7 @@
                 <div class="professionals__list_item-hover-block">
                     <img class="professionals__img" src="img/proff-3.png">
                     <div class="professionals__list_item-hover item-hover">
-                        <img class="item-hover__icon" src="img/brill.png">
+                        <img class="item-hover__icon" src="img/brill3.png">
                         <div class="item-hover__block">
                             <h2 class="item-hover__title">Личностные качества</h2>
                             <p class="item-hover__body">- Фотограф со стажем<br>
@@ -167,10 +168,10 @@
 </div>
 
 <div class="number-of">
-    <div class="number-of__block">
+    <div class="number-of__block" id="counts">
         <div class="number-of__item">
             <h2 class="number-of__item_title">
-                4<span style="color:#1e44d0;">.</span>
+                <span class="spincrement">4</span><span style="color:#1e44d0;">.</span>
             </h2>
             <p class="number-of__item_body">
                 года в профессии
@@ -178,7 +179,7 @@
         </div>
         <div class="number-of__item">
             <h2 class="number-of__item_title">
-                38<span style="color:#1e44d0;">.</span>
+                <span class="spincrement">38</span><span style="color:#1e44d0;">.</span>
             </h2>
             <p class="number-of__item_body">
                 текущих проектов
@@ -186,7 +187,7 @@
         </div>
         <div class="number-of__item">
             <h2 class="number-of__item_title">
-                1k<span style="color:#1e44d0;">+</span>
+                <span class="spincrement">1000</span><span style="color:#1e44d0;">+</span>
             </h2>
             <p class="number-of__item_body">
                 наших учеников
@@ -360,6 +361,8 @@
     </div>
 </footer>-->
 
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/jquery.spincrement.min.js"></script>
 <script src="js/scripts.js"></script>
 </body>
 </html>
