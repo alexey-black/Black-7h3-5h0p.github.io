@@ -459,14 +459,14 @@ video.fullscreen-bg__video {
         box-shadow: 10px 10px 30px #cccccc;
         border-radius: 21px;
         margin-bottom: 22px;
-        transition: 1s;
+        transition: 0.5s;
     }
     &__list_item-hover{}
     &__list_item-hover-block:hover &__img,
     &__list_item-hover-block:active &__img,
     &__list_item-hover-block:focus &__img{
         transform: rotateY(-180deg);
-        transition: 1s;
+        transition: 0.5s;
         opacity: 0;
         box-shadow: none;
     }
@@ -474,7 +474,7 @@ video.fullscreen-bg__video {
     &__list_item-hover-block:active &__img + .item-hover,
     &__list_item-hover-block:focus &__img + .item-hover{
         transform: rotateY(0deg);
-        transition: 1s;
+        transition: 0.5s;
         opacity: 1;
         background: #1e44d0;
         box-shadow: 10px 10px 30px #cccccc;
@@ -492,7 +492,7 @@ video.fullscreen-bg__video {
 }
 .item-hover {
     transform: rotateY(180deg);
-    transition: 1s;
+    transition: 0.5s;
     opacity: 0;
     &__icon{
         position: relative;
