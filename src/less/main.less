@@ -551,7 +551,7 @@ video.fullscreen-bg__video {
     background-size: cover;
     max-width: 1920px;
     margin: -20px auto;
-    height: 1020px;
+    height: 1220px;
     color:#fff;
     &__block {
         width: 1200px;
@@ -591,6 +591,19 @@ video.fullscreen-bg__video {
             font-size: 14px;
             letter-spacing: 1px;
             line-height: 19px;
+        }
+        &_link{
+            font-size: 14px;
+            color: #fff;
+            text-decoration: none;
+            padding: 18px 30px;
+            border: 2px solid #1842d1;
+            border-radius: 70px;
+            text-transform: uppercase !important;
+            float: none !important;
+            margin: 15px auto 0;
+            opacity: 0;
+            transition: .5s;
         }
         &_list{
             list-style-image: url("../img/gal.png");
@@ -674,6 +687,15 @@ video.fullscreen-bg__video {
 .rates__item-2 .rates__item_price{
     margin-top: 32px;
 }
+.rates__item-2 .rates__item_link{
+    background: none repeat scroll 0 0 #fff;
+    color: #080808;
+    border: none;
+    margin-top: 20px;
+}
+.rates__item-2 .rates__item_link:after{
+    background: #ccc;
+}
 .rates__item-3 .rates__item_price{
     margin-top: -4px;
     background: #ececec;
@@ -687,16 +709,12 @@ video.fullscreen-bg__video {
 .rates__item:hover .rates__item_img,.rates__item:active .rates__item_img,.rates__item:focus .rates__item_img{
     transform: rotateY(180deg);
 }
-.rates__item:hover,
- .rates__item:active,
- .rates__item:focus{
-     height: 580px;
+.rates__item:hover .rates__item_link,
+ .rates__item:active .rates__item_link,
+ .rates__item:focus .rates__item_link{
+opacity: 1;
  }
-.rates__item-2:hover,
-.rates__item-2:active,
-.rates__item-2:focus{
-    height: 640px;
-}
+
 
 
 
