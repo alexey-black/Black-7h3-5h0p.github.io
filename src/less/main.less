@@ -574,13 +574,14 @@ video.fullscreen-bg__video {
     &__item{
         width: 370px;
         margin: auto 0;
-        height: 540px;
+        height: 560px;
         text-align: center;
         background: #ffffff;
         color:#080808;
         border-radius: 20px;
         position: relative;
         z-index: 50;
+        transition: .5s;
         &_body{
             width: 300px;
             padding: 20px 0;
@@ -633,7 +634,7 @@ video.fullscreen-bg__video {
     &__item-2{
         width: 410px;
         text-align: center;
-        height: 607px;
+        height: 640px;
         background: #1e44d0;
         color:#fff;
         box-shadow: 0 0 30px #1e44d0;
@@ -660,8 +661,8 @@ video.fullscreen-bg__video {
     }
     &__icon {
         position: relative;
-        top: -6px;
-        left: -220px;
+        top: -16px;
+        left: -180px;
     }
     &__line {
         width: 200px;
@@ -671,7 +672,7 @@ video.fullscreen-bg__video {
     }
 }
 .rates__item-2 .rates__item_price{
-    margin-top: 0px;
+    margin-top: 32px;
 }
 .rates__item-3 .rates__item_price{
     margin-top: -4px;
@@ -685,6 +686,16 @@ video.fullscreen-bg__video {
 
 .rates__item:hover .rates__item_img,.rates__item:active .rates__item_img,.rates__item:focus .rates__item_img{
     transform: rotateY(180deg);
+}
+.rates__item:hover,
+ .rates__item:active,
+ .rates__item:focus{
+     height: 580px;
+ }
+.rates__item-2:hover,
+.rates__item-2:active,
+.rates__item-2:focus{
+    height: 640px;
 }
 
 
