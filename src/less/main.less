@@ -551,7 +551,7 @@ video.fullscreen-bg__video {
     background-size: cover;
     max-width: 1920px;
     margin: -20px auto;
-    height: 1220px;
+    height: 1120px;
     color:#fff;
     &__block {
         width: 1200px;
@@ -715,11 +715,171 @@ video.fullscreen-bg__video {
 opacity: 1;
  }
 
+.portfolio{
+    max-width: 1920px;
+    height: 1830px;
+    margin: 0 auto;
+    background: url("../img/portfolio-bg.jpg") no-repeat center;
+    background-size: cover;
+    &__block{
+        width: 1200px;
+        margin: 0 auto;
+    }
+    &__obuch{
+        text-align: right;
+        height: 600px;
+    }
+}
 
+.obuch{
+    &__title{
+        font-family: 'GothaProBlack';
+        font-size: 80px;
+        margin: 0 0 13px 0;
+        padding: 167px 0 0 0;
+    }
+    &__body{
+        font-family: 'GothaProMed';
+        font-size: 26px;
+        margin-bottom: 37px;
+    }
+    &__link{
+        font-size: 16px;
+        color: #fff;
+        text-decoration: none;
+        padding: 31px 43px;
+        border-radius: 70px;
+        text-transform: uppercase !important;
+        float: none !important;
+        margin: 15px auto 0;
+        -webkit-transition: .5s;
+        transition: .5s;
+        max-width: 230px;
+        margin-right: 0;
+        margin-top: 5px;
+    }
+    &__link-3{
+        background: #f0a022;
+        box-shadow: 0 0 15px #f0a022;
+    }
+    &__link-2{
+        background: #0bc8a2;
+        box-shadow: 0 0 15px #0bc8a2;
+    }
+    &__link-1{
+        background-image: linear-gradient(to right,#476dfa,#1e44d0);
+        box-shadow: 0 0 15px #476dfa;
+    }
+    &__link:after{
+        content: "";
+        position: absolute;
+        background: none repeat scroll 0 0 #1842d1;
+        height: 0%;
+        left: 50%;
+        top: 50%;
+        width: 100%;
+        z-index: -1;
+        border-radius: 70px;
+        -webkit-transition: all .3s ease 0s;
+        -moz-transition: all .3s ease 0s;
+        -o-transition: all .3s ease 0s;
+        transition: all .3s ease 0s;
+    }
+    &__link-3:after{
+        background: #f0ae7a;
+    }
+    &__link-2:after{
+        background: #a3c5c8;
+    }
+    &__link-1:after{
+        background-image: linear-gradient(to right, #4b88fa, #203fd0);
+    }
+    &__link:hover:after{
+        height: 420%;
+    }
+    &__link:after {
+        width: 0%;
+        border-radius: 50%;
+        opacity: .5;
+        -moz-transform: translateX(-50%) translateY(-50%);
+        -ms-transform: translateX(-50%) translateY(-50%);
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+    }
+    &__link:hover:after {
+        height: 450%;
+        width: 110%;
+        opacity: 1;
+    }
+}
 
+.portfolio-slider{
+    color: #fff;
+    margin-top: 348px;
+    &__title{
+        font-size: 62px;
+        color: #fff;
+        font-family: 'GothaProBlack';
+        margin: 0 0 0 0;
+        text-align: right;
+        position: relative;
+        top: 126px;
+        width: 300px;
+        margin-left: 580px;
+    }
+    &__title + div{
+        margin-left: 580px;
+        top: 150px;
+    }
+    &__line{
 
+    }
+    &__block{
 
+    }
+    &__item{
+        &_tag{
+            font-size: 32px;
+            margin-top: 182px;
+        }
+        &_body{
+            font-size: 16px;
+            float: left;
+            width: 500px;
+            line-height: 1.55;
+            margin-top: 31px;
+        }
+        &_img{
+            float: left;
+            margin-left: 163px;
+            margin-right: 51px;
 
+        }
+        &_link{
+            margin: 0 0 0 0px;
+            font-size: 16px;
+            color: #fff;
+            text-decoration: none;
+            padding: 31px 43px;
+            border-radius: 70px;
+            text-transform: uppercase !important;
+            float: none !important;
+            margin: 15px auto 0;
+            -webkit-transition: .5s;
+            transition: .5s;
+            margin-left: 0;
+            width: 328px;
+            max-width: 250px;
+            background-image: linear-gradient(to right,#476dfa,#1e44d0);
+            position: relative;
+            box-shadow: 0 0 30px #476dfa;
+            top: 44px;
+        }
+        &_link:after{
+            background-image: linear-gradient(to right, #4b88fa, #203fd0);
+        }
+    }
+}
 
 
 
