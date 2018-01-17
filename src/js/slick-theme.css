@@ -26,7 +26,7 @@
     top: 50%;
 
     display: block;
-
+    transition: 0.5s;
     width: 20px;
     height: 20px;
     padding: 0;
@@ -35,7 +35,7 @@
     transform: translate(0, -50%);
 
     cursor: pointer;
-
+    border-radius: 50%;
     color: transparent;
     border: none;
     outline: none;
@@ -46,6 +46,7 @@
 .slick-next:hover,
 .slick-next:focus
 {
+box-shadow: 0 0 15px #a52eb2;
 
 }
 .slick-prev:hover:before,
