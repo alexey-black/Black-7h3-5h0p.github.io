@@ -207,6 +207,7 @@ body{
         float: left;
         margin-top: 41px;
         padding: 0;
+
     }
     &__item{
         float: left;
@@ -238,6 +239,8 @@ body{
     height: 205px;
     position: relative;
     padding: 75px 0 0 0;
+    position: relative;
+    overflow: hidden;
     margin-top: -100px;
     box-shadow: 0 0 20px -3px #000;
     &__title{
@@ -294,8 +297,10 @@ video.fullscreen-bg__video {
     color:#fff;
     padding: 100px 0 40px;
     margin-top: 50px;
+    position: relative;
+    overflow: hidden;
     &__block{
-        width: 1400px;
+        width: 1200px;
         margin: 0 auto;
         display: flex;
         flex-direction: row;
@@ -410,6 +415,8 @@ video.fullscreen-bg__video {
     max-width: 1920px;
     margin: -20px auto;
     height: 1020px;
+    position: relative;
+    overflow: hidden;
     &__block{
         width: 1200px;
         margin: 0 auto;
@@ -528,6 +535,8 @@ video.fullscreen-bg__video {
     background: #f1f1f1;
     margin: 0 auto;
     padding: 56px 0 13px;
+    position: relative;
+    overflow: hidden;
     &__block {
         width: 1200px;
         margin: 0 auto;
@@ -561,6 +570,8 @@ video.fullscreen-bg__video {
     max-width: 1920px;
     margin: -20px auto;
     height: 1120px;
+    position: relative;
+    overflow: hidden;
     color:#fff;
     &__block {
         width: 1200px;
@@ -730,6 +741,8 @@ opacity: 1;
     margin: 0 auto;
     background: url("../img/portfolio-bg.jpg") no-repeat center;
     background-size: cover;
+    position: relative;
+    overflow: hidden;
     &__block{
         width: 1200px;
         margin: 0 auto;
@@ -826,6 +839,8 @@ opacity: 1;
 .portfolio-slider{
     color: #fff;
     margin-top: 348px;
+    position: relative;
+    overflow: hidden;
     &__title{
         font-size: 62px;
         color: #fff;
@@ -900,6 +915,8 @@ opacity: 1;
     background: #1e44d0;
     color: #fff;
     padding: 51px 0 51px;
+    position: relative;
+    overflow: hidden;
     &__block{
         width: 1200px;
         margin: 0 auto;
@@ -912,6 +929,7 @@ opacity: 1;
         padding-top: 0px;
         letter-spacing: 1px;
         margin-top: -5px;
+        margin-bottom: 0;
     }
     &__link{
         font-size: 16px;
@@ -959,6 +977,8 @@ opacity: 1;
     color: #fff;
     height: 40px;
     padding: 47px 0;
+    position: relative;
+    overflow: hidden;
     &__block{
         width: 1200px;
         margin: 0 auto;
@@ -992,71 +1012,277 @@ opacity: 1;
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media (min-width: @lg-min) and (max-width: 1400px) {
+@media (min-width: 922px) and (max-width: 1220px) {
     .header{
-        &__main-menu{
-            width: 1200px;
-        }
-    }
-}
-
-@media (min-width: @md-min) and (max-width: @lg-min) {
-    .header{
+        max-width: 1220px;
         &__main-menu{
             width: 992px;
         }
+        &__block-middle{
+            width: 992px;
+        }
+    }
+    .main-menu__list{
+        width: 73%;
+    }
+    .block-logo {
+        width: 26%;
+    }
+    .main-menu__item {
+        margin-right: 40px;
+    }
+    .header__block-middle {
+        width: 980px;
+    }
+    .advantages {
+        width: 980px;
+    }
+    .advantages__title {
+        font-size: 37px;
+    }
+    .about{
+        max-width: 1220px;
+        &__block{
+            width: 992px;
+        }
+    }
+    .number-of {
+        max-width: 1220px;
+        &__block{
+            width: 992px;
+        }
+    }
+    .number-of__item {
+        width: 327px;
+    }
+    .portfolio {
+        max-width: 1220px;
+        background: url(../img/portfolio-bg.jpg) no-repeat;
+        background-position: 65% 0px;
+        &__block{
+            width: 980px;
+        }
+    }
+    .portfolio-slider__item_body {
+        width: 390px;
+    }
+    .write-to-us{
+        max-width: 1220px;
+        padding: 51px 0 24px;
+        &__block{
+            width: 992px;
+        }
+    }
+    .footer{
+        max-width: 1220px;
+        &__block{
+            width: 992px;
+        }
+        &__nomber {
+            width: 235px;
+        }
+        &__email {
+            width: 300px;
+        }
+        &__insta {
+            width: 212px;
+        }
+    }
+    .rates__title {
+        width: 900px;
+    }
+    .rates__icon {
+        left: -113px;
+    }
+    .professionals {
+        max-width: 1220px;
+        &__block{
+            width: 980px;
+        }
+    }
+
+    .write-to-us__title {
+        font-size: 30px;
+        width: 698px;
+    }
+    .professionals__list_item {
+        width: 340px;
+        position: relative;
+        top: 38px;
+    }
+    .professionals__img {
+        height: 356px;
+        width: 300px;
+
+    }
+    .professionals__list_item-hover {
+        width: 300px;
+        height: 356px;
+    }
+    .item-hover__title {
+        font-size: 24px;
+    }
+    .item-hover__body {
+        width: 214px;
+        font-size: 14px;
+    }
+    .item-hover__icon {
+        left: -61px;
+        width: 127px;
+        margin-bottom: 29px;
+    }
+    .rates__item {
+        width: 310px;
+    }
+    .rates {
+        max-width: 1220px;
+        height: 1182px;
+        &__block{
+            width: 992px;
+        }
+    }
+    .rates__item-2 {
+        width: 330px;
+    }
+    .rates__item_title {
+        font-size: 27px;
+        width: 285px;
+    }
+    .rates__item_list-item {
+        margin: 0 auto;
+        margin-bottom: 15px;
+        width: 251px;
+        line-height: 1.7;
+    }
+    .rates__item_list {
+        font-size: 15px;
+    }
+    .rates__item-2 .rates__item_list-item {
+        line-height: 1.4;
+    }
+    .rates__item-3 .rates__item_price {
+        padding: 10px 0 13px;
+    }
+    .rates__item-1 .rates__item_price {
+        padding: 10px 0 16px;
+    }
+    .professionals__list_item-3{
+        width:300px;
     }
 }
 
-@media (min-width: @sm-min) and (max-width: @md-min) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 768px) and (max-width: 992px) {
     .header{
+        max-width: 992px;
         &__main-menu{
+            width: 768px;
+        }
+        &__block-middle{
+            width: 768px;
+        }
+    }
+    .header__block-middle {
+        width: 768px;
+    }
+    .about{
+        max-width: 992px;
+        &__block{
+            width: 768px;
+        }
+    }
+    .number-of {
+        max-width: 992px;
+        &__block{
+            width: 768px;
+        }
+    }
+    .portfolio {
+        max-width: 992px;
+        &__block{
+            width: 768px;
+        }
+    }
+    .write-to-us{
+        max-width: 992px;
+        &__block{
+            width: 768px;
+        }
+    }
+    .footer{
+        max-width: 992px;
+        &__block{
             width: 768px;
         }
     }
 }
 
-@media  (max-width: @sm-min) {
+@media  (max-width: 768px) {
     .header{
+        max-width: 768px;
         &__main-menu{
+            width: 320px;
+        }
+        &__block-middle{
+            width: 320px;
+        }
+    }
+    .header__block-middle {
+        width: 320px;
+    }
+    .about{
+        max-width: 768px;
+        &__block{
+            width: 320px;
+        }
+    }
+    .number-of {
+        max-width: 768px;
+        &__block{
+            width: 320px;
+        }
+    }
+    .portfolio {
+        max-width: 768px;
+        &__block{
+            width: 320px;
+        }
+    }
+    .write-to-us{
+        max-width: 768px;
+        &__block{
+            width: 320px;
+        }
+    }
+    .footer{
+        max-width: 768px;
+        &__block{
             width: 320px;
         }
     }
