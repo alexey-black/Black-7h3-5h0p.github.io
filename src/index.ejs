@@ -10,7 +10,145 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="js/slick-theme.css">
     <link rel="stylesheet" href="js/slick.css">
+    <link rel="stylesheet" media="all" href="js/animate.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <style>
+        .header {
+            background-size: cover;
+            width: 100%;
+            max-width: 1920px;
+            height: 900px;
+            color: #fff;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        .header__main-menu {
+            width: 1200px;
+            margin: 0 auto;
+        }
+        .header__block-middle {
+            margin: 0 auto;
+            width: 1000px;
+            height: 500px;
+            background-size: cover;
+            margin-top: 187px;
+        }
+        .header__block-middle_title {
+            font-family: 'GothaProBlack';
+            font-size: 102px;
+            text-align: center;
+            margin: 0px 0 0 0;
+            padding-top: 150px;
+        }
+        .header__block-middle_body {
+            font-family: 'GothaPro';
+            font-size: 18px;
+            text-align: center;
+            margin-bottom: 54px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+        }
+        .header__block-middle_button {
+            font-size: 14px;
+            color: #fff;
+            text-decoration: none;
+            padding: 18px 46px;
+            border: 2px solid #1842d1;
+            border-radius: 70px;
+            text-transform: uppercase !important;
+        }
+        .header__block-middle_block-links {
+            width: 500px;
+            margin: 0 auto;
+        }
+        .main-menu__list {
+            list-style: none;
+            position: relative;
+            margin: 0 auto;
+            width: 63%;
+            float: left;
+            margin-top: 41px;
+            padding: 0;
+        }
+        .main-menu__item {
+            float: left;
+            margin-right: 50px;
+        }
+        .main-menu__link {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .main-menu__link:hover,
+        .main-menu__link:active,
+        .main-menu__link:focus {
+            color: #1e44d0;
+        }
+        .block-logo {
+            float: left;
+            margin-top: 30px;
+            width: 37%;
+        }
+        .advantages {
+            width: 1200px;
+            margin: 0 auto;
+            background: #1e44d0;
+            color: #fff;
+            border-radius: 30px;
+            height: 205px;
+            padding: 75px 0 0 0;
+            position: relative;
+            margin-top: -100px;
+            -webkit-box-shadow: 0 0 20px -3px #000;
+            box-shadow: 0 0 20px -3px #000;
+        }
+        .advantages__title {
+            width: 43.5%;
+            margin: 0;
+            text-align: right;
+            margin-right: 5%;
+            float: left;
+            margin-left: 4%;
+            margin-top: -7px;
+            font-size: 44px;
+            font-family: 'GothaProBlack';
+        }
+        .advantages__body {
+            width: 37.2%;
+            text-align: left;
+            margin-right: 4%;
+            float: left;
+            line-height: 1.65;
+            margin-top: -2px;
+            border-bottom: 1px solid #afafaf;
+            padding-bottom: 19px;
+            font-size: 15px;
+            letter-spacing: 1px;
+            font-weight: normal;
+        }
+        video.fullscreen-bg__video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 900px;
+            width: 1920px;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+        }
+        .video-controler {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+        .knife-img {
+            position: absolute;
+            top: -29px;
+            left: -58px;
+        }
+    </style>
 </head>
 <body>
 
@@ -21,26 +159,26 @@
         <div class="block-logo">
             <img class="block-logo__img" src="img/logo.png">
         </div>
-        <ul class="main-menu__list">
-            <li class="main-menu__item"><a class="main-menu__link" href="#">О нас</a></li>
-            <li class="main-menu__item"><a class="main-menu__link" href="#">Услуги</a></li>
-            <li class="main-menu__item"><a class="main-menu__link" href="#">Команда</a></li>
-            <li class="main-menu__item"><a class="main-menu__link" href="#">Цены</a></li>
-            <li class="main-menu__item"><a class="main-menu__link" href="#">Клиенты</a></li>
-            <li class="main-menu__item"><a class="main-menu__link" href="#">Обучение</a></li>
-            <li class="main-menu__item" style="margin: 0;"><a class="main-menu__link" href="#">Контакты</a></li>
+        <ul class="main-menu__list" id="menu">
+            <li class="main-menu__item"><a class="main-menu__link" href="#advantages">О нас</a></li>
+            <li class="main-menu__item"><a class="main-menu__link" href="#about">Услуги</a></li>
+            <li class="main-menu__item"><a class="main-menu__link" href="#professionals">Команда</a></li>
+            <li class="main-menu__item"><a class="main-menu__link" href="#rates">Цены</a></li>
+            <li class="main-menu__item"><a class="main-menu__link" href="#klients">Клиенты</a></li>
+            <li class="main-menu__item"><a class="main-menu__link" href="#obuch">Обучение</a></li>
+            <li class="main-menu__item" style="margin: 0;"><a class="main-menu__link" href="#footer">Контакты</a></li>
         </ul>
         <a href="#menuMob" id="toggle"><span></span></a>
 
         <div id="menuMob">
-            <ul class="main-menu__list">
-                <li class="main-menu__item"><a class="main-menu__link" href="#">О нас</a></li>
-                <li class="main-menu__item"><a class="main-menu__link" href="#">Услуги</a></li>
-                <li class="main-menu__item"><a class="main-menu__link" href="#">Команда</a></li>
-                <li class="main-menu__item"><a class="main-menu__link" href="#">Цены</a></li>
-                <li class="main-menu__item"><a class="main-menu__link" href="#">Клиенты</a></li>
-                <li class="main-menu__item"><a class="main-menu__link" href="#">Обучение</a></li>
-                <li class="main-menu__item" style="margin: 0;"><a class="main-menu__link" href="#">Контакты</a></li>
+            <ul class="main-menu__list" id="menu">
+                <li class="main-menu__item"><a class="main-menu__link" href="#advantages">О нас</a></li>
+                <li class="main-menu__item"><a class="main-menu__link" href="#about">Услуги</a></li>
+                <li class="main-menu__item"><a class="main-menu__link" href="#professionals">Команда</a></li>
+                <li class="main-menu__item"><a class="main-menu__link" href="#rates">Цены</a></li>
+                <li class="main-menu__item"><a class="main-menu__link" href="#klients">Клиенты</a></li>
+                <li class="main-menu__item"><a class="main-menu__link" href="#obuch">Обучение</a></li>
+                <li class="main-menu__item" style="margin: 0;"><a class="main-menu__link" href="#footer">Контакты</a></li>
             </ul>
         </div>
     </div>
@@ -48,8 +186,11 @@
         <h2 class="header__block-middle_title">“Black Room<span style="color:#1842d1;">.</span>”</h2>
         <p class="header__block-middle_body">мы команда для развития вашего проекта</p>
         <div class="header__block-middle_block-links">
-            <a class="header__block-middle_button button-blue anim_btn effektD" href="#">наши услуги</a>
-            <a class="header__block-middle_button button-noblue anim_btn effektD" href="#">про обучение</a>
+            <ul id="menu" style="padding: 0;margin: 0;list-style: none;">
+                <li><a class="header__block-middle_button button-blue anim_btn effektD"   href="#about">наши услуги</a></li>
+                <li><a class="header__block-middle_button button-noblue anim_btn effektD"  href="#obuch">про обучение</a></li>
+            </ul>
+
         </div>
     </div>
         <div class="mouse-scroll" id="mouse-scroll">
@@ -74,7 +215,7 @@
     </div>
 </header>
 
-<div class="advantages">
+<div class="advantages" id="advantages">
     <div class="advantages-block">
         <h2 class="advantages__title">Комплексное продвижение вашего аккаунта в instagram</h2>
         <p class="advantages__body">До недавнего времени считалось, что абсолютно сходящийся ряд продуцирует интеграл по ориентированной области. Первая производная переворачивает лист Мёбиуса. Замкнутое множество</p>
@@ -82,7 +223,7 @@
     <img src="img/knife.png" class="knife-img">
 </div>
 
-<div class="about">
+<div class="about" id="about">
     <div class="about__block">
         <div class="about__block_item about__block_item-1 about-item">
             <img class="about-item__img" src="img/icon1.svg">
@@ -117,14 +258,14 @@
     </div>
 </div>
 
-<div class="professionals">
+<div class="professionals" id="professionals">
     <div class="professionals__block">
         <div class="professionals__block_title">
             <h2 class="professionals__title">Мы команда профессионалов<span style="color:#1842d1;">.</span></h2><img src="img/proff-icon.png" class="professionals__icon">
             <div class="professionals__line"></div><p class="professionals__body">До недавнего времени считалось, что абсолютно сходящийся ряд продуцирует интеграл по ориентированной области. Первая производная</p>
         </div>
         <div class="professionals__list">
-            <div class="professionals__list_item professionals__list_item-1">
+            <div class="professionals__list_item professionals__list_item-1 fadeInLeft wow">
                 <div class="professionals__list_item-hover-block">
                     <img class="professionals__img" src="img/proff-1.png">
                     <div class="professionals__list_item-hover item-hover">
@@ -142,7 +283,7 @@
                 <h2 class="professionals__item-title">Настя Ломова<span style="color:#1842d1;">.</span></h2>
                 <p class="professionals__item-body">До недавнего времени считалось, что абсолютно сходящийся ряд продуцирует интеграл по ориентированной области.</p>
             </div>
-            <div class="professionals__list_item professionals__list_item-2">
+            <div class="professionals__list_item professionals__list_item-2 fadeInUp wow">
                 <div class="professionals__list_item-hover-block">
                     <img class="professionals__img" src="img/proff-2.png">
                     <div class="professionals__list_item-hover item-hover">
@@ -160,7 +301,7 @@
                 <h2 class="professionals__item-title">Ксюша Баути<span style="color:#1842d1;">.</span></h2>
                 <p class="professionals__item-body">До недавнего времени считалось, что абсолютно сходящийся ряд продуцирует интеграл по ориентированной области.</p>
             </div>
-            <div class="professionals__list_item professionals__list_item-3">
+            <div class="professionals__list_item professionals__list_item-3 fadeInRight wow">
                 <div class="professionals__list_item-hover-block">
                     <img class="professionals__img" src="img/proff-3.png">
                     <div class="professionals__list_item-hover item-hover">
@@ -211,7 +352,7 @@
     </div>
 </div>
 
-<div class="rates">
+<div class="rates" id="rates">
     <div class="rates__block">
         <div class="rates__block_title">
             <h2 class="rates__title">Наши тарифы<br>
@@ -272,9 +413,9 @@
     </div>
 </div>
 
-<div class="portfolio">
+<div class="portfolio" id="obuch">
     <div class="portfolio__block">
-        <div class="portfolio__obuch obuch">
+        <div class="portfolio__obuch obuch fadeInRight wow">
             <img class="mobile-img" src="img/portfolio-foto.png">
             <h2 class="obuch__title">Обучение</h2>
             <p class="obuch__body">Мы проводим обучение по<br>
@@ -283,17 +424,17 @@
             <a href="#" class="obuch__link obuch__link-2 effektD anim_btn">мобильное фото</a><br>
             <a href="#" class="obuch__link obuch__link-3 effektD anim_btn">скетчинг маркерами</a><br>
         </div>
-        <div class="portfolio-slider">
-            <h2 class="portfolio-slider__title">Портфолио<span style="color:#1842d1;">.</span></h2>
-            <div class="rates__line"></div>
+        <div class="portfolio-slider" id="klients">
+            <h2 class="portfolio-slider__title fadeInRight wow">Портфолио<span style="color:#1842d1;">.</span></h2>
+            <div class="rates__line fadeInRight wow"></div>
             <div class="portfolio-slider__block" id="sliderBlock">
                 <div class="portfolio-slider__item portfolio-slider__item-1">
-                    <img class="portfolio-slider__item_img" src="img/iphone1.png">
-                    <p class="portfolio-slider__item_tag">@lita.leto</p>
-                    <p class="portfolio-slider__item_body">До недавнего времени считалось, что абсолютно сходящийся ряд продуцирует интеграл по ориентированной области. Первая производная переворачивает лист Мёбиуса. Замкнутое множество</p>
-                    <a class="portfolio-slider__item_link effektD anim_btn" href="#">посмотреть аккаунт</a>
+                    <img class="portfolio-slider__item_img fadeInLeft wow" src="img/iphone1.png">
+                    <p class="portfolio-slider__item_tag fadeInRight wow">@lita.leto</p>
+                    <p class="portfolio-slider__item_body fadeInRight wow">До недавнего времени считалось, что абсолютно сходящийся ряд продуцирует интеграл по ориентированной области. Первая производная переворачивает лист Мёбиуса. Замкнутое множество</p>
+                    <a class="portfolio-slider__item_link effektD anim_btn fadeInRight wow" href="#">посмотреть аккаунт</a>
                 </div>
-                <div class="portfolio-slider__item portfolio-slider__item-1">
+                <div class="portfolio-slider__item portfolio-slider__item-1 ">
                     <img class="portfolio-slider__item_img" src="img/iphone1.png">
                     <p class="portfolio-slider__item_tag">@lita.leto</p>
                     <p class="portfolio-slider__item_body">До недавнего времени считалось, что абсолютно сходящийся ряд продуцирует интеграл по ориентированной области. Первая производная переворачивает лист Мёбиуса. Замкнутое множество</p>
@@ -317,7 +458,7 @@
     </div>
 </div>
 
-<div class="footer">
+<div class="footer" id="footer">
     <div class="footer__block">
         <img class="footer__logo" src="img/logo.png">
         <p class="footer__nomber">8 (928) 036-41-96<img class="footer__img" src="img/nomber.png"></p>
@@ -327,162 +468,11 @@
 </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--<div class="content">
-    <div class="content__block">
-        <div class="content__breadcrumb breadcrumb">
-            <a class="breadcrumb_link" href="#">LISP</a> / <a class="breadcrumb_link" href="#">Одежда</a> / Футболки
-        </div>
-
-        <div class="content__field-image field-image">
-            <img class="field-image_img" id="fullImg" name="full-img" src="img/tshirts/tshirt_green.jpg">
-        </div>
-
-        <div class="content__title-name title-name">
-            <h1 class="title-name_text">Футболка Alien technology</h1>
-        </div>
-        <div class="content__field-body field-body">
-            <p class="field-body_text">Состав: 100% хлопок, динамическая типизация, польская нотация. Производство: Россия.</p>
-        </div>
-
-        <div class="content__product-price product-price" >
-            <div class="product-price_text">1500₽</div>
-        </div>
-
-        <form class="content__webform-client-form" action="/" method="post" id="webformClientForm" accept-charset="UTF-8">
-            <div class="content__product-size  field-size">
-                <label for="edit-submitted-size" class="label-text">Размер:</label>
-                <div id="editSubmittedSize" class="form-radios">
-                    <div class="form-radios__form-item">
-                        <input required="required" type="radio" id="editSubmittedSize1" name="submitted[size]" value="1" class="form-radios__input form-radios__input_1">
-                        <label class="form-radios__label" for="edit-submitted-size-1"> <p class="form-radios__text">S</p> </label>
-                     </div>
-                    <div class="form-radios__form-item">
-                        <input required="required" type="radio" id="editSubmittedSize2" name="submitted[size]" value="2" class="form-radios__input form-radios__input_2">
-                        <label class="form-radios__label" for="edit-submitted-size-2"> <p class="form-radios__text">M</p></label>
-
-                    </div>
-                    <div class="form-radios__form-item">
-                        <input required="required" type="radio" id="editSubmittedSize3" name="submitted[size]" value="3" class="form-radios__input form-radios__input_3">
-                        <label class="form-radios__label" for="edit-submitted-size-3"><p class="form-radios__text">L</p> </label>
-
-                    </div>
-                </div>
-            </div>
-            <div class="content__product-color  field-color">
-                <label for="edit-submitted-color" class="label-text">Цвет:</label>
-                <div id="editSubmittedColor" class="form-radios">
-                    <div class="form-radios__form-item">
-                        <input required="required" type="radio" id="editColorWhite" name="submitted[color]" value="white"  class="js_form-radios__input form-radios__input form-radios__input_white">
-                        <label class="form-radios__label" for="editColorWhite"> </label>
-
-                    </div>
-                    <div class="form-radios__form-item">
-                        <input required="required" type="radio" id="editColorYellow" name="submitted[color]" value="yellow" class="js_form-radios__input form-radios__input form-radios__input_yellow">
-                        <label class="form-radios__label" for="editColorYellow"> </label>
-
-                    </div>
-                    <div class="form-radios__form-item">
-                        <input required="required" type="radio" id="editColorGreen" name="submitted[color]" value="green"  class="js_form-radios__input form-radios__input form-radios__input_green">
-                        <label class="form-radios__label" for="editColorGreen"> </label>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="content__product-add-to-cart  field-add-to-cart"><input class="form-submit ajax-processed add-to-cart" type="submit" name="op" value="Купить"></div>
-        </form>
-
-
-            <div class="content__product-post-on-later  field-post-on-later">
-                <img src="img/heart-icon.png"><input type="submit" name="post-on-later" value="Отложить на потом" class="form-submit ajax-processed post-on-later">
-            </div>
-
-        </div>
-    </div>
-
-
-<footer class="footer">
-    <div class="footer__block footer__block-top footer-top">
-        <div class="footer-top__menu footer-top__menu-left">
-            <h2 class="footer-top__menu_title">Сервис и поддержка</h2>
-            <ul class="footer-top__menu_list">
-                <%const service = ['Как сделать заказ','Возврат товара','Публичная оферта','Доставка','Способы оплаты','Правила продажи','Возврат денежных средств','Вопросы и ответы'];%>
-                <%for (let item = 1;item<=service.length;item++){%>
-                <li class="footer-top__menu_item footer-top__menu_list-<%=item%>">
-                    <a class="footer-top__menu_link" href="#" title="<%=service[item-1]%>"><%=service[item-1]%></a>
-                </li>
-                <%}%>
-            </ul>
-        </div>
-
-        <div class="footer-top__menu footer-top__menu-midle"><h2 class="footer-top__menu_title">О комтании</h2>
-            <ul class="footer-top__menu_list">
-                <%const about = ['О нас','Контакты','Вакансии','Партнерам','Сертификаты','Преимущества','Наши скидки'];%>
-                <%for (let item = 1;item<=about.length;item++){%>
-                <li class="footer-top__menu_item footer-top__menu_item-<%=item%>">
-                    <a class="footer-top__menu_link" href="#" title="<%=about[item-1]%>"><%=about[item-1]%></a>
-                </li>
-                <%}%>
-            </ul>
-        </div>
-        <div class="footer-top__block-info">
-            <div class="footer-top__block-info_item footer-top__block-info_first">
-                <img class="footer-top__block-info_img" src="img/icons/delivery.svg" width="50" height="50">бесплатная доставка от 4000 ₽
-            </div>
-            <div class="footer-top__block-info_item footer-top__block-info_second">
-                <img class="footer-top__block-info_img" src="img/icons/heart.svg" width="32" height="32">пробники в подарок при каждой покупке
-            </div>
-            <div class="footer-top__block-info_item footer-top__block-info_the-third">
-                <img class="footer-top__block-info_img" src="img/icons/cup.svg" width="32" height="32">акции и подарки за покупку
-            </div>
-        </div>
-        <div class="footer-top__block-icon">
-            <div class="footer-top__block-icon_link footer-top__block-icon_link-1">
-                <a href="#"><img class="footer-top__block-icon_img" src="img/icons/facebook.svg" width="32" height="32"></a>
-            </div>
-            <div class="footer-top__block-icon_link footer-top__block-icon_link-2">
-                <a href="#"><img class="footer-top__block-icon_img" src="img/icons/twitter.svg" width="32" height="32"></a>
-            </div>
-            <div class="footer-top__block-icon_link footer-top__block-icon_link-3">
-                <a href="#"><img class="footer-top__block-icon_img" src="img/icons/instagram.svg" width="32" height="32"></a>
-            </div>
-        </div>
-    </div>
-    <div class="footer__block footer__block-bottom">
-        <p>2005-2017 © 7h35h0p.ru — модный интернет-магазин одежды, обуви и аксессуаров.<br> Все права защищены. Доставка по всей России!</p>
-    </div>
-</footer>-->
-
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="js/jquery.spincrement.min.js"></script>
 <script src="js/slick.min.js"></script>
 <script src="js/scripts.js"></script>
+<script src="js/wow.min.js"></script>
+<script>new WOW().init();</script>
 </body>
 </html>
