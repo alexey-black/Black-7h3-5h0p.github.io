@@ -68,5 +68,17 @@ $(document).ready(function(){
         top = $(id).offset().top;
         $('body,html').animate({scrollTop: top}, 1000);
     });
+    $("#menu-mobile").on("click","a", function (event) {
+        event.preventDefault();
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 1000);
+    });
+    $("#menu-center").on("click","a", function (event) {
+        event.preventDefault();
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 1000);
+    });
 });
 
