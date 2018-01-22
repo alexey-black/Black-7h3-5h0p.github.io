@@ -1697,11 +1697,28 @@ opacity: 1;
     #toggle{
         display: block;
         right: 15px;
+        display: block;
+        z-index: 100;
     }
     #menuMob{
         display: block;
-        width: 320px;
+        max-width: 320px;
         padding: 0;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: #000;
+        padding-top: 120px;
+        z-index: 50;
+        padding-bottom: 44px;
+    }
+    #menuMob ul, #menuMob li, #menuMob li a {
+        list-style: none;
+        display: block;
+        margin: 0;
+        font-size: 17px;
+        padding: 0;
+        text-decoration: underline;
     }
     .mouse-scroll {
         display: none;
@@ -1713,9 +1730,15 @@ opacity: 1;
     .block-logo {
         width: 26%;
         margin-left: 15px;
+        z-index: 100;
+        display: block;
+        position: relative;
     }
     .main-menu__item {
         margin-right: 40px;
+        float: none;
+        margin: 0 !important;
+        margin-bottom: 29px !important;
     }
     .header__block-middle {
         width: 320px;
