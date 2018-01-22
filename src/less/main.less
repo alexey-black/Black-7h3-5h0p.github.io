@@ -529,7 +529,68 @@ video.fullscreen-bg__video {
         line-height: 2.5;
     }
 }
+.dfname1,.dfname3,.dfname5{
+    float: left;
+    width: 370px;
+    margin: 0 0 0 50px;
+    position: relative;
+}
+.dfname5{
+    float: none;
+    width: 100%;
+}
+.zagtext {
+    font-family: 'GothaProBlack';
+    color: #000;
+    text-align: center;
+    margin: 42px 0;
+    font-size: 36px;
+}
+input.drr {
+    padding: 18px 75px;
+    max-width: 100%;
+    margin: 17px 0px 0 274px;
+}
 
+.dr {
+    width: 300px;
+    height: 40px;
+    padding: 6px 12px 6px 23px;
+    border-radius: 30px;
+    margin-bottom: 24px;
+    border: 1px solid #111;
+    outline: none;
+}
+
+.dr-massege{
+    resize: none;
+    width: 670px;
+    padding: 15px 12px 6px 23px;
+    height: 55px;
+    border-radius: 25px;
+}
+#blanket {
+    background-color:#111;
+    opacity: 0.9;
+    *background:none;
+    position:fixed;
+    z-index: 9001;
+    top:0px;
+    left:0px;
+    width:100%;
+}
+#popUpDiv {
+    position: fixed;
+    background: #FFF no-repeat;
+    width: 820px;
+    left: 50% !important;
+    height: 500px;
+    top: 50% !important;
+    z-index: 9002;
+    margin: -250px 0 0 -410px;
+    border-radius: 22px;
+}
+#popUpDiv a {position:relative; top:20px; left:20px}
 .number-of {
     max-width: 1920px;
     background: #f1f1f1;
@@ -1313,6 +1374,29 @@ opacity: 1;
             width: 700px;
         }
     }
+    #popUpDiv {
+        position: fixed;
+        background: #FFF no-repeat;
+        width: 700px;
+        left: 50% !important;
+        height: 500px;
+        top: 50% !important;
+        z-index: 9002;
+        margin: -250px 0 0 -350px;
+        border-radius: 22px;
+    }
+    .dfname1, .dfname3, .dfname5 {
+        width: 300px;
+    }
+    .dr {
+        width: 256px;;
+    }
+    .dr-massege {
+        width: 557px !important;
+    }
+    input.drr {
+        margin: 17px 0px 0 225px;
+    }
     .header__block-middle_title {
         font-size: 86px;
         padding-top: 157px;
@@ -1548,6 +1632,39 @@ opacity: 1;
             margin: 0 auto;
             height: 430px;
         }
+    }
+    #popUpDiv {
+        position: fixed;
+        background: #FFF no-repeat;
+        width: 290px;
+        left: 50% !important;
+        height: 500px;
+        top: 50% !important;
+        z-index: 9002;
+        margin: -250px 0 0 -145px;
+        border-radius: 22px;
+    }
+    .zagtext {
+        margin: 30px 0;
+        font-size: 20px;
+    }
+    .dfname1, .dfname3, .dfname5,.dfname4,.dfname2 {
+        width: 239px;
+        float: none;
+        margin: 0 auto;
+    }
+    .dr {
+        width: 200px;
+        height: 25px;
+    }
+    .dr-massege {
+        width: 200px !important;
+        height: 50px;
+        margin-bottom: 0;
+    }
+    input.drr {
+        margin: 17px 0px 0 26px;
+        padding: 15px 69px;
     }
     img.block-logo__img {
         width: 186px;

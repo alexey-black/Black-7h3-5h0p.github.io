@@ -317,10 +317,27 @@
 <div class="write-to-us">
     <div class="write-to-us__block">
         <h2 class="write-to-us__title">Готовы обсудить свой проект? <span class="write-to-us__title_mobile">Пишите нам сообщение!</span></h2>
-        <a class="write-to-us__link effektD anim_btn" href="#">Написать сообщение</a>
+        <div id="blanket" onclick="popup('popUpDiv')" style="display:none;">
+        </div>
+        <a class="write-to-us__link effektD anim_btn" onclick="popup('popUpDiv')">Написать сообщение</a>
     </div>
 </div>
-
+<div id="popUpDiv" style="display:none;">
+    <form action="send.php" method="post" id="myformss">
+        <div class="zagtext">Отправить сообщение</div>
+        <div id ="csslefts" class="dfname1">
+            <div><input type="text" name="dfname1" required="required" placeholder="Ваше имя" class="dr"/></div></div>
+        <div id ="csslefts" class="dfname2">
+            <div><input type="text" name="dfname2" required="required" placeholder="Ваш аккаунт" class="dr"/></div></div>
+        <div id ="csslefts" class="dfname3">
+            <div><input placeholder="Ваш телефон" required="required" type="text" name="dfname3" class="dr"/></div></div>
+        <div id ="csslefts" class="dfname4">
+            <div><input placeholder="E-mail" type="text" required="required" name="dfname4" class="dr"/></div></div>
+        <div id ="csslefts" class="dfname5">
+            <div><textarea placeholder="Сообщение" type="text" name="dfname5" class="dr dr-massege"></textarea></div></div>
+        <input class="drr header__block-middle_button button-blue anim_btn effektD" type="submit" name="dfotpr" value="Отправить" >
+    </form>
+</div>
 <div class="footer" id="footer">
     <div class="footer__block">
         <img class="footer__logo" src="img/logo.png">
