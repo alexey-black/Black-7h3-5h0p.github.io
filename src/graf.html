@@ -1,0 +1,72 @@
+<body>
+<canvas onclick="getCoords(event)" style="border: 1px solid #c6c6c6" id="myCanvas" width="500" height="500">
+</canvas>
+<script>
+
+    var coords = [];
+    var perps = [];
+    var x1_1,x1_2, x1_3, x1_4;
+    var stepClik = 0;
+    var ctx = document.getElementById("myCanvas").getContext("2d");
+    ctx.strokeStyle = "#000"
+
+    function getCoords(e)
+    {
+        drawCircle(e.clientX, e.clientY, 4);
+        coords.push(e.clientX, e.clientY);
+        if(stepClik === 0){
+            if (coords.length === 4) {
+                drawLine(coords[0], coords[1], coords[2], coords[3]);
+                x1_1 = coords[0];
+                x1_2 = coords[1];
+                x1_3 = coords[2];
+                x1_4 = coords[3];
+                stepClik = 1;
+                coords = [];
+                var r=Math.floor(Math.random() * (256));
+                var g=Math.floor(Math.random() * (256));
+                var b=Math.floor(Math.random() * (256));
+                ctx.strokeStyle='#' + r.toString(16) + g.toString(16) + b.toString(16);
+            }
+        }
+        else{
+            if (coords.length === 2) {
+                drawLine(x1_1, x1_2, coords[0], coords[1]);
+                drawLine(x1_3, x1_4, coords[0], coords[1]);
+                (function (x1_3) {
+                    x1_1 = x1_3;
+                })(x1_3);
+                (function (x1_4) {
+                    x1_2 = x1_4;
+                })(x1_4);
+                x1_3 = coords[0];
+                x1_4 = coords[1];
+                coords = [];
+                var r=Math.floor(Math.random() * (256));
+                var g=Math.floor(Math.random() * (256));
+                var b=Math.floor(Math.random() * (256));
+                ctx.strokeStyle='#' + r.toString(16) + g.toString(16) + b.toString(16);
+            }
+        }
+    }
+
+    function drawLine(x_first, y_first, x_second, y_second)
+    {
+        ctx.beginPath();
+        ctx.moveTo( x_first, y_first );
+        ctx.lineTo( x_second, y_second );
+        ctx.lineWidth = 2;
+
+        ctx.stroke();
+    }
+
+    function drawCircle(x, y, radius)
+    {
+        ctx.beginPath();
+        ctx.arc(x, y, radius, 0, Math.PI*2, false);
+        ctx.closePath();
+        ctx.fill();
+    }
+
+</script>
+</body>
